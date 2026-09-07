@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+scikit-learn
+xgboost
+tensorflow
+pandas
+numpy
+ucimlrepo
+jupyter
+nbconvert
+pydantic
+python-multipart
