@@ -10,3 +10,6 @@ jupyter
 nbconvert
 pydantic
 python-multipart
+shap
+pytest
+flake8

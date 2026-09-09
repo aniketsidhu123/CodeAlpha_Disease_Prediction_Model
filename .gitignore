@@ -5,6 +5,7 @@ ENV/
 env.bak/
 venv.bak/
 .env
+.env.*
 
 # Python
 __pycache__/
@@ -29,6 +30,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+*.log
 
 # Node / Frontend
 node_modules/
@@ -45,11 +47,24 @@ yarn-error.log*
 *.swp
 *.swo
 .DS_Store
+Thumbs.db
 
-# Models and Datasets
-# If you don't want to upload large pre-trained model files to git, uncomment these:
+# Models (large binary files — regenerate with train_models.py)
 backend/models/*.pkl
 backend/models/*.keras
 backend/models/*.h5
+
+# Datasets
 *.csv
 *.xlsx
+
+# Docker
+docker-compose.override.yml
+
+# Jupyter
+.ipynb_checkpoints/
+backend/notebooks/.ipynb_checkpoints/
+
+# Misc
+*.bak
+*.tmp
