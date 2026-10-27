@@ -35,12 +35,36 @@ A full-stack web application that uses machine learning to predict the likelihoo
 │   └── Dockerfile
 ├── notebooks/             # Jupyter notebooks for exploration
 ├── docker-compose.yml     # Full-stack orchestration
+├── setup.bat              # Windows 1-click setup & ML model training
+├── run.bat                # Windows interactive application launcher
 └── .github/workflows/     # CI pipeline
 ```
 
 ## 🚀 Quick Start
 
-### Option 1: Docker (Recommended)
+### Option 1: Windows 1-Click Scripts (Recommended on Windows)
+
+1. **Setup Environment & Dependencies** (run once):
+   ```cmd
+   setup.bat
+   ```
+   *Automatically checks Python & Node.js, sets up the Python virtual environment, installs all backend and frontend dependencies, and trains the machine learning models if missing.*
+
+2. **Launch Application**:
+   ```cmd
+   run.bat
+   ```
+   *Opens the interactive launcher. Press `Enter` to start the full stack (FastAPI on port 8000 + React/Vite on port 5173) and automatically open your default browser.*
+
+   **CLI Shortcuts**:
+   - `run.bat all` — Start full stack immediately and open browser
+   - `run.bat backend` — Start FastAPI backend only
+   - `run.bat frontend` — Start Vite frontend only
+   - `run.bat docker` — Start via Docker Compose
+   - `run.bat stop` — Stop dev servers and release ports 8000 and 5173
+   - `setup.bat --retrain` — Force retrain all ML models
+
+### Option 2: Docker
 
 ```bash
 docker compose up --build
@@ -50,7 +74,7 @@ docker compose up --build
 - Backend API: `http://localhost:8000`
 - API Docs: `http://localhost:8000/docs`
 
-### Option 2: Manual Setup
+### Option 3: Manual Setup
 
 #### Backend
 
